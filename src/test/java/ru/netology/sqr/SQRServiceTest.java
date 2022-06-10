@@ -11,8 +11,8 @@ public class SQRServiceTest {
 
         SQRService service = new SQRService();
 
-        int minimum = -10;
-        int maximum = 20;
+        int minimum = 100;
+        int maximum = 300;
 
         int count = service.sqrCounter(minimum, maximum);
         System.out.println(count);

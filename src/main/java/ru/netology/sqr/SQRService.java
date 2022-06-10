@@ -5,13 +5,15 @@ public class SQRService {
     public int sqrCounter(int minimum, int maximum) {
 
 
-        int x = (int) Math.sqrt(minimum);
+        int x;
         int count = 0;
-        while (maximum >= Math.pow(x, 2)) {
-            if (Math.pow(x, 2) < minimum | x == 0) {
-                x++;
-            } else {
-                x++;
+
+        if (minimum < 0) {
+            minimum = 1;
+        }
+
+        for (x = 10; x <= 99; x++) {
+            if (Math.pow(x, 2) > minimum & Math.pow(x, 2) < maximum) {
                 count++;
             }
         }
